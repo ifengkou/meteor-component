@@ -1,0 +1,11 @@
+.DS_Store
+.idea
+target
+*.iml
+/view/flutter/**/gen/*
+**/*.log
+dist
+logs
+cache
+build
+package-lock.json
