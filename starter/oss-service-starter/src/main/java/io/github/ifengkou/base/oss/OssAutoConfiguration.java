@@ -14,10 +14,8 @@ import io.github.ifengkou.base.oss.config.OssProperties;
  */
 @Configuration
 @EnableConfigurationProperties({OssProperties.class})
-@ConditionalOnProperty(
-        name = {"meteor.oss.enabled"},
-        havingValue = "true"
-)
+@ConditionalOnProperty(prefix = "meteor.oss", value = "enabled", havingValue = "true")
+//@ConditionalOnProperty(prefix = "meteor.oss", value = "enabled", havingValue = "true")
 public class OssAutoConfiguration
 {
     @Autowired
