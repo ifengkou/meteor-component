@@ -6,6 +6,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 import java.util.UUID;
 
 /**
@@ -56,7 +57,7 @@ public interface OssService
     }
 
     default boolean isAllowedFileSuffixName(MultipartFile file){
-        String suffixName = getSuffixName(file).toUpperCase();
+        String suffixName = getSuffixName(file).toLowerCase();
         String suffixWhileListStr = getFileTypeWhileList();
         if(suffixWhileListStr == null){
             return true;
@@ -66,7 +67,7 @@ public interface OssService
             return true;
         }
         // 文件后缀白名单校验(不区分大小写)
-        return Arrays.stream(suffixWhileListStr.split(",")).anyMatch(s -> s.equals(suffixName));
+        return Arrays.stream(suffixWhileListStr.split("\\|")).anyMatch(s -> s.equalsIgnoreCase(suffixName));
     }
 
     default String getSuffixName(MultipartFile file){

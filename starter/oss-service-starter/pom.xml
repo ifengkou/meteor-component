@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.github.ifengkou</groupId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.2-SNAPSHOT</version>
     <artifactId>oss-service-starter</artifactId>
 
     <name>oss-service-starter</name>
@@ -211,21 +211,6 @@
             </distributionManagement>
         </profile>
 
-        <profile>
-            <id>xishu</id>
-            <!-- 用于deploy -->
-            <distributionManagement>
-                <repository>
-                    <id>wukong_keta_release</id>
-                    <name>wukong_keta_release</name>
-                    <url>http://nexus.ketaops.cc/repository/maven_wukong_keta_release/</url>
-                </repository>
-                <snapshotRepository>
-                    <id>wukong_keta_snapshot</id>
-                    <name>wukong_keta_snapshot</name>
-                    <url>http://nexus.ketaops.cc/repository/maven_wukong_keta_snapshot/</url>
-                </snapshotRepository>
-            </distributionManagement>
-        </profile>
+
     </profiles>
 </project>
