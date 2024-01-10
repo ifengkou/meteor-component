@@ -1,13 +1,13 @@
-package vip.clickhouse.base.oss;
+package io.github.ifengkou.base.oss;
 
+import io.github.ifengkou.base.oss.config.OssMinioProperties;
 import org.springframework.beans.factory.FactoryBean;
 import org.springframework.util.StringUtils;
-import vip.clickhouse.base.oss.config.OssMinioProperties;
-import vip.clickhouse.base.oss.config.OssProperties;
-import vip.clickhouse.base.oss.config.OssS3Properties;
-import vip.clickhouse.base.oss.service.AmazonS3Service;
-import vip.clickhouse.base.oss.service.MinioService;
-import vip.clickhouse.base.oss.service.NfsService;
+import io.github.ifengkou.base.oss.config.OssProperties;
+import io.github.ifengkou.base.oss.config.OssS3Properties;
+import io.github.ifengkou.base.oss.service.AmazonS3Service;
+import io.github.ifengkou.base.oss.service.MinioService;
+import io.github.ifengkou.base.oss.service.NfsService;
 
 /**
  * @date: 2023/12/24

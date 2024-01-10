@@ -1,4 +1,4 @@
-package vip.clickhouse.base.oss.config;
+package io.github.ifengkou.base.oss.config;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

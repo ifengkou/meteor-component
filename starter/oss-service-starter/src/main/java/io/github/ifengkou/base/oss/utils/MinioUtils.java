@@ -1,5 +1,6 @@
-package vip.clickhouse.base.oss.utils;
+package io.github.ifengkou.base.oss.utils;
 
+import io.github.ifengkou.base.oss.MeteorOssException;
 import io.minio.BucketExistsArgs;
 import io.minio.CopyObjectArgs;
 import io.minio.CopySource;
@@ -24,14 +25,13 @@ import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
-import sun.misc.BASE64Decoder;
-import vip.clickhouse.base.oss.MeteorOssException;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
@@ -294,7 +294,8 @@ public class MinioUtils
     public static InputStream base64ToInputStream(String base64) {
         ByteArrayInputStream stream = null;
         try {
-            byte[] bytes = new BASE64Decoder().decodeBuffer(base64.trim());
+            //byte[] bytes = new BASE64Decoder().decodeBuffer(base64.trim());
+            byte[] bytes = Base64.getDecoder().decode(base64.trim());
             stream = new ByteArrayInputStream(bytes);
         } catch (Exception e) {
             e.printStackTrace();

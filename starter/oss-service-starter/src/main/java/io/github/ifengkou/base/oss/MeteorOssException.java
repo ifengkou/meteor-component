@@ -1,4 +1,4 @@
-package vip.clickhouse.base.oss;
+package io.github.ifengkou.base.oss;
 
 /**
  * @author https://github.com/ifengkou

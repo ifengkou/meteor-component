@@ -1,15 +1,15 @@
-package vip.clickhouse.base.oss.service;
+package io.github.ifengkou.base.oss.service;
 
+import io.github.ifengkou.base.oss.MeteorOssException;
+import io.github.ifengkou.base.oss.OssService;
 import io.minio.BucketExistsArgs;
 import io.minio.MakeBucketArgs;
 import io.minio.MinioClient;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
 import org.springframework.web.multipart.MultipartFile;
-import vip.clickhouse.base.oss.MeteorOssException;
-import vip.clickhouse.base.oss.OssService;
-import vip.clickhouse.base.oss.config.OssProperties;
-import vip.clickhouse.base.oss.utils.MinioUtils;
+import io.github.ifengkou.base.oss.config.OssProperties;
+import io.github.ifengkou.base.oss.utils.MinioUtils;
 
 import java.io.InputStream;
 import java.util.List;

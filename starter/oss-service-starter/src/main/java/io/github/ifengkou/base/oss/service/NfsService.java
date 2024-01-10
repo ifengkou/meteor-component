@@ -1,13 +1,13 @@
-package vip.clickhouse.base.oss.service;
+package io.github.ifengkou.base.oss.service;
 
+import io.github.ifengkou.base.oss.MeteorOssException;
+import io.github.ifengkou.base.oss.OssService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.FileUtils;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
-import vip.clickhouse.base.oss.MeteorOssException;
-import vip.clickhouse.base.oss.OssService;
-import vip.clickhouse.base.oss.config.OssProperties;
+import io.github.ifengkou.base.oss.config.OssProperties;
 
 import java.util.List;
 
